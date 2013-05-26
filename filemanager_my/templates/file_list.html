@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <ul class="breadcrumb">
+    {% for crumb in breadcrumbs %}
+       <li><a href="#">{{ crumb }}</a><span class="divider">/</span></li>
+    {% endfor %}
+    </ul>
+
+    <ul class="nav nav-tabs nav-stacked">
+        {% for file in files %}
+           <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
